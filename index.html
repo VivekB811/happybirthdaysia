@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday | Memories</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb);
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: #f06292;
+            color: #fff;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #f06292;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            color: #e91e63;
+        }
+        section {
+            display: none;
+            padding: 20px;
+        }
+        section.active {
+            display: block;
+        }
+        .slideshow {
+           
+            width: 100%;
+            max-width: 450px;
+            margin: 15px auto;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .slides {
+            display: flex;
+            transition: transform 1s ease;
+        }
+        .slides img {
+            height: 400px;
+            width: 200px;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .video-container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin: 20px;
+        }
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f06292;
+            color: white;
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px 10px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background: #f06292;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Birthday sia ❤️</h1>
+        <nav>
+            <a href="#" onclick="showSection('home')">Home</a>
+            <a href="#" onclick="showSection('wish')">Birthday Wish</a>
+            <a href="#" onclick="showSection('photos')">Photos</a>
+            <a href="#" onclick="showSection('videos')">Videos</a>
+            <a href="#" onclick="showSection('final')">Final Message</a>
+        </nav>
+    </header>
+
+    <section id="home" class="active">
+        <h2>Welcome to Your Special Page!</h2>
+        <p>Today is all about celebrating you and the joy you bring to the world. Let’s take a trip down memory lane. 🎉</p>
+        <a class="btn" href="#" onclick="showSection('wish')">Start the Journey</a>
+    </section>
+
+    <section id="wish">
+        <h2>Happy Birthday 🎂</h2>
+        <p>Enjoy your life, be successful, and always stay happy. Sorry if I ever hurt you intentionally. 💕</p>
+        <p>Click the gift to reveal a surprise!</p>
+        <a class="btn" href="#" onclick="showSection('photos')">Next: Memories 📸</a>
+    </section>
+
+    <section id="photos">
+        <h2>Memories Through Photos 📸</h2>
+        <div class="slideshow" id="slideshow">
+            <div class="slides" id="slides">
+                <img src="WhatsApp Image 2024-12-14 at 23.07.33_8eeb4ae5.jpg" alt="Photo 1">
+                <img src="WhatsApp Image 2024-12-14 at 23.07.34_29da74e0.jpg" alt="Photo 2">
+                <img src="WhatsApp Image 2024-12-14 at 23.07.36_1680e92a.jpg" alt="Photo 3">
+                <img src="WhatsApp Image 2024-12-14 at 23.07.39_740732ca.jpg" alt="Photo 4">
+                <img src="WhatsApp Image 2024-12-14 at 23.07.39_bca31b93.jpg" alt="Photo 5">
+                <img src="WhatsApp Image 2024-12-14 at 23.07.40_c4cbb7d4.jpg" alt="Photo 6">
+                <img src="WhatsApp Image 2024-12-14 at 23.07.40_ed2c216c.jpg" alt="Photo 7">
+                <img src="WhatsApp Image 2024-12-14 at 23.07.41_f8619093.jpg" alt="Photo 8">
+                <img src="WhatsApp Image 2024-12-14 at 23.30.42_49fbc007.jpg" alt="Photo 9">
+                <img src="WhatsApp Image 2024-12-14 at 23.30.42_533ba410.jpg" alt="Photo 10">
+                <img src="WhatsApp Image 2024-12-14 at 23.30.43_83335b7f.jpg" alt="Photo 11">
+                <img src="WhatsApp Image 2024-12-14 at 23.30.45_9417ad03.jpg" alt="Photo 12">
+                <img src="WhatsApp Image 2024-12-14 at 23.30.42_49fbc007.jpg" alt="Photo 13">
+                <img src="WhatsApp Image 2024-12-14 at 23.30.42_533ba410.jpg" alt="Photo 14">
+                <img src="WhatsApp Image 2024-12-14 at 23.30.43_83335b7f.jpg" alt="Photo 15">
+                <img src="WhatsApp Image 2024-12-14 at 23.30.45_9417ad03.jpg" alt="Photo 16">
+
+            </div>
+        </div>
+        <a class="btn" href="#" onclick="showSection('videos')">Next: Videos 🎥</a>
+    </section>
+
+    <section id="videos">
+        <h2>Memories Through Videos 🎥</h2>
+        <div class="video-container">
+            <video src="WhatsApp Video 2024-12-14 at 23.30.44_defc6d5e.mp4" controls></video>
+            <video src="WhatsApp Video 2024-12-14 at 23.30.42_30190f58.mp4" controls></video>
+            <video src="WhatsApp Video 2024-12-14 at 23.07.38_3f4e77da.mp4" controls></video>
+           
+        </div>
+        <a class="btn" href="#" onclick="showSection('final')">Next: Final Message ✨</a>
+    </section>
+
+    <section id="final">
+        <h2>A Final Message...</h2>
+        <p>My window is always open for you. Remember, you're special and loved. ❤️</p>
+        <p>From your champudi.</p>
+        <a class="btn" href="#" onclick="showSection('home')">Restart Journey</a>
+    </section>
+
+    <footer>
+        <p>Designed with ❤️ for your special day.</p>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        const slidesContainer = document.getElementById("slides");
+        let currentIndex = 0;
+
+        function startSlideshow() {
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slidesContainer.children.length;
+                const offset = -currentIndex * 100;
+                slidesContainer.style.transform = `translateX(${offset}%)`;
+            }, 3000);
+        }
+
+        startSlideshow();
+    </script>
+</body>
+</html>
